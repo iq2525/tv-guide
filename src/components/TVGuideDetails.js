@@ -6,8 +6,6 @@ export default class TVGuideDetails extends Component {
     if (!tvGuide){
       return (<div className="instructions">Click the button to get tvGuide data for London</div>)
     }
-    
-    console.log('11-tvGuide: ', tvGuide)
 
     return (
       <div>
