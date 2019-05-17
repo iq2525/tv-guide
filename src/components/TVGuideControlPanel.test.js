@@ -1,24 +1,24 @@
 import React from 'react';
 import {shallow} from 'enzyme'
 
-import WeatherControlPanel from './WeatherControlPanel';
+import TVGuideControlPanel from './TVGuideControlPanel';
 
-describe('<WeatherDetails />', () => {
+describe('<TVGuideDetails />', () => {
   it('renders component in success state', () => {
-    const wrapper = shallow(<WeatherControlPanel 
+    const wrapper = shallow(<TVGuideControlPanel 
       fetching={false}
-      onUpdateWeather={null}
+      onUpdateTVGuide={null}
       error={null}
     />)
   
     expect(wrapper.find('.update-button').length).toEqual(1)
-    expect(wrapper.find('.update-button').text()).toEqual('Update Weather')
+    expect(wrapper.find('.update-button').text()).toEqual('Update TVGuide')
   });
 
   it('renders in fetching data state', () => {
-    const wrapper = shallow(<WeatherControlPanel 
+    const wrapper = shallow(<TVGuideControlPanel 
       fetching={true}
-      onUpdateWeather={null}
+      onUpdateTVGuide={null}
       error={null}
     />)
   
@@ -27,21 +27,21 @@ describe('<WeatherDetails />', () => {
   });
 
   it('renders in error state', () => {
-    const wrapper = shallow(<WeatherControlPanel 
+    const wrapper = shallow(<TVGuideControlPanel 
       fetching={false}
-      onUpdateWeather={null}
+      onUpdateTVGuide={null}
       error={true}
     />)
   
     expect(wrapper.find('.error-message').length).toEqual(1)
   });
 
-  it('calls the onUpdateWeather dispatch method when the button is clicked', () => {
+  it('calls the onUpdateTVGuide dispatch method when the button is clicked', () => {
     const mockFn = jest.fn();
     
-    const wrapper = shallow(<WeatherControlPanel 
+    const wrapper = shallow(<TVGuideControlPanel 
       fetching={false}
-      onUpdateWeather={mockFn}
+      onUpdateTVGuide={mockFn}
       error={false}
     />)
   

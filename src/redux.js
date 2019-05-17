@@ -6,7 +6,7 @@ const API_CALL_FAILURE = "API_CALL_FAILURE";
 // reducer with initial state
 const initialState = {
   fetching: false,
-  weather: null,
+  tvGuide: null,
   error: null
 };
 
@@ -15,10 +15,10 @@ export function reducer(state = initialState, action) {
     case API_CALL_REQUEST:
       return { ...state, fetching: true, error: null };
     case API_CALL_SUCCESS:
-      console.log('3-data: ', action.weather)
-      return { ...state, fetching: false, weather: action.weather };
+      console.log('3-data: ', action.tvGuide)
+      return { ...state, fetching: false, tvGuide: action.tvGuide };
     case API_CALL_FAILURE:
-      return { ...state, fetching: false, weather: null, error: action.error };
+      return { ...state, fetching: false, tvGuide: null, error: action.error };
     default:
       return state;
   }

@@ -3,7 +3,7 @@ import { watcherSaga, workerSaga } from './sagas'
 import * as api from './api'
 // import jest from 'jest'
 
-//TODO - Need to add Saga tests
+//TODO - Need to add more Saga tests
 
 it('redux saga test', async () => {
   const mockedData = [

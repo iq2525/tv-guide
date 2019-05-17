@@ -18,7 +18,7 @@ export function* workerSaga() {
     // dispatch a success action to the store with the new dog
     console.log('************************')
     // console.log('2-data: ', data[0].score)
-    yield put({ type: "API_CALL_SUCCESS", weather: data });
+    yield put({ type: "API_CALL_SUCCESS", tvGuide: data });
   
   } catch (error) {
     // dispatch a failure action to the store with the error

@@ -1,32 +1,32 @@
 import React, { Component } from "react";
 import "./App.scss";
-import WeatherDetails from "./components/WeatherDetails.js";
-import WeatherControlPanel from "./components/WeatherControlPanel.js";
+import TVGuideDetails from "./components/TVGuideDetails.js";
+import TVGuideControlPanel from "./components/TVGuideControlPanel.js";
 
 import { connect } from "react-redux";
 
 class App extends Component {
   render() {
-    const { fetching, weather, onUpdateWeather, error } = this.props;
+    const { fetching, tvGuide, onUpdateTVGuide, error } = this.props;
     
     return (
       <div className="App">
         <header className="header">
           
           <h1 className="title">
-            Welcome to the Weather App
+            Welcome to the TVGuide App
           </h1>
         </header>
 
-        <WeatherDetails 
+        <TVGuideDetails 
           fetching={fetching}
-          weather={weather}
+          tvGuide={tvGuide}
           error={error}
         />
 
-        <WeatherControlPanel
+        <TVGuideControlPanel
           fetching={fetching}
-          onUpdateWeather={onUpdateWeather}
+          onUpdateTVGuide={onUpdateTVGuide}
           error={error}
         />
       </div>
@@ -37,14 +37,14 @@ class App extends Component {
 const mapStateToProps = state => {
   return {
     fetching: state.fetching,
-    weather: state.weather,
+    tvGuide: state.tvGuide,
     error: state.error
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    onUpdateWeather: () => dispatch({ type: "API_CALL_REQUEST" })
+    onUpdateTVGuide: () => dispatch({ type: "API_CALL_REQUEST" })
   };
 };
 

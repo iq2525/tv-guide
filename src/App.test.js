@@ -9,7 +9,7 @@ describe('<App />', () => {
     const store = mockStore()
     const container = shallow(<App store={store} /> )  
     
-    expect(container.html()).toContain('weather-details')
-    expect(container.html()).toContain('weather-control-panel')
+    expect(container.html()).toContain('tvGuide-details')
+    expect(container.html()).toContain('tvGuide-control-panel')
   });
 });

@@ -1,4 +1,4 @@
-# Weather App
+# TVGuide App
 
 ## Used Create-React-App as boilerplate
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -11,8 +11,8 @@ Has been tested with the following setup:
 ## Install App
 Clone the repository and enter the directory:
 ```
-git clone git@github.com:iq2525/weather-app.git
-cd weather-app
+git clone git@github.com:iq2525/tvGuide-app.git
+cd tvGuide-app
 ``` 
 
 Install dependencies:
@@ -27,7 +27,7 @@ npm start
 
 In your browser, go to: http://localhost:3000/
 
-Click the button 'Update Weather' to get the latest weather data for London.
+Click the button 'Update TVGuide' to get the latest tvGuide data for London.
 
 ## Run tests
 I believe that Unit tests are vital when making any code.
@@ -64,7 +64,7 @@ All tests are located next to the source file so they are easy to import.
 
 The main component is the 'App.js' component.  All the Redux setup is done is this file.
 
-This then allowed me to create 2 simple presentational Components - WeatherDetails & WeatherControlPanel.
+This then allowed me to create 2 simple presentational Components - TVGuideDetails & TVGuideControlPanel.
 
 This is a common pattern with React and makes it easier to manage code.
 
@@ -87,7 +87,7 @@ In the end I was not able to get it working.  I will need more time to investiga
 
 ### CORS
 
-The sample api endpoint from Open Weather does not have CORS.  
+The sample api endpoint from Open TVGuide does not have CORS.  
 
 I realised afterwards that I need to sign up for an account.  Which gave me access to an endpoint that does have CORS.
 
@@ -96,8 +96,8 @@ I realised afterwards that I need to sign up for an account.  Which gave me acce
 * Have a hosted version running
 * Get the Redux Saga tests working
 * Improve test coverage.
-* Display more Weather data
-* Allow the user to get weather for different countries and cities
+* Display more TVGuide data
+* Allow the user to get tvGuide for different countries and cities
 * Make the API endpoint and API App ID configurable
 * Make the App responsive
 * Add React storybook
